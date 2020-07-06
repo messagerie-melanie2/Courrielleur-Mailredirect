@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE overlay [
+  <!ENTITY % msgHdrViewOverlayDTD SYSTEM "chrome://messenger/locale/msgHdrViewOverlay.dtd">
+    %msgHdrViewOverlayDTD;
+  <!ENTITY % mailredirectOverlayDTD SYSTEM "chrome://mailredirect/locale/msgHdrViewOverlay.dtd">
+    %mailredirectOverlayDTD;
+]>
+
+
+<?xml-stylesheet href="chrome://mailredirect-os/skin/messageHeader.css" type="text/css"?>
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="chrome://mailredirect/content/cm2signalspam.js"/>
+
+  <menupopup id="hdrForwardDropdown">
+    <menuitem id="hdrMailredirectButton"
+              label="&hdrMailredirectButton1.label;"
+              tooltiptext="&hdrMailredirectButton1.tooltip;"
+              command="cmd_mailredirect"
+              observes="cmd_mailredirect"/>
+  </menupopup>
+
+  <menupopup id="hdrJunkDropdown"
+              onpopupshowing="cm2InitMenuJunk()">
+    <menuseparator id="hdrJunkDropdown-sep"/>
+  </menupopup>
+
+</overlay>
