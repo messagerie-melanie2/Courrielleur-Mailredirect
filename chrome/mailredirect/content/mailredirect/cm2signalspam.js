@@ -66,13 +66,13 @@ function cm2InitPopupJunk(){
       }
 
       let lib=Services.prefs.getStringPref("courrielleur.btspam."+i+".libelle");
-
+/*
       let newMenuItem=document.createElement("menuitem");
       newMenuItem.setAttribute("label", lib);
       newMenuItem.setAttribute("value", dest);
       newMenuItem.setAttribute('oncommand', 'cm2SignalSpam("'+dest+'");event.stopPropagation();');
 
-      junkPopup.insertBefore(newMenuItem, sep);
+      junkPopup.insertBefore(newMenuItem, sep);*/
     }
   }
 }
